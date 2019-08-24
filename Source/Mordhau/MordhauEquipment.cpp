@@ -265,3 +265,7 @@ void AMordhauEquipment::AssignCustomizationToProjectile(class AMordhauProjectile
 {
 
 }*/
+
+void AMordhauEquipment::AssignCustomization(const FEquipmentCustomization& Customization, uint8 CustomizationEmblem, uint8 CustomizationEmblemColor1, uint8 CustomizationEmblemColor2)
+{
+}

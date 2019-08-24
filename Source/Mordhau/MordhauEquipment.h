@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "MordhauActor.h"
+#include "Mordhau.h"
 #include "MordhauEquipment.generated.h"
 
 /**
@@ -282,6 +283,11 @@ UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
 
  //UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
 //	struct FEquipmentCustomization                     AssignedCustomization;
+
+ UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	 struct FEquipmentCustomization AssignedCustomization;
+
+
 
  UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite)
 	uint8                                       Colors;
@@ -932,6 +938,8 @@ UFUNCTION(BlueprintCallable, Category = "MordhauEquipmentFns")
 //UFUNCTION(BlueprintCallable, Category = "MordhauEquipmentFns")
  //void AssignCustomization(const struct FEquipmentCustomization& Customization, uint8 CustomizationEmblem, uint8 CustomizationEmblemColor1, uint8 CustomizationEmblemColor2);
 //UFUNCTION(BlueprintCallable, Category = "MordhauEquipmentFns")
+UFUNCTION(BlueprintCallable)
+	void AssignCustomization(const FEquipmentCustomization& Customization, uint8 CustomizationEmblem, uint8 CustomizationEmblemColor1, uint8 CustomizationEmblemColor2);
  //struct FBoxSphereBounds ComputeAccurateBounds();
 //UFUNCTION(BlueprintCallable, Category = "MordhauEquipmentFns")
 //bool CanPerformAttack(class AMordhauCharacter* Character, EAttackMove Move);
